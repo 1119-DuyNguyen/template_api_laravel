@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -18,3 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/send-welcome-email', [EmailController::class, 'sendWelcomeEmail']);

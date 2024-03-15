@@ -15,7 +15,7 @@ use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Validation\ValidationException;
 
-class LoginApiRequest extends FormRequest
+class RegisterUserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

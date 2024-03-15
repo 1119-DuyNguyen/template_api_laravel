@@ -15,7 +15,7 @@ abstract class ApiController extends Controller
 
     //$this->success($data,204,'Xóa Thành công)
     //$this->error($data,403,'Không đủ quyền hạn')
-    protected function successResponse($data, int $code = 200)
+    protected function successResponse($data=[], int $code = 200)
     {
         return response()->json(
             [

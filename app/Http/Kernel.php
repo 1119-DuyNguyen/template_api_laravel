@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\ForceJsonResponse;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -42,6 +43,7 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
+            ForceJsonResponse::class
         ],
     ];
 
