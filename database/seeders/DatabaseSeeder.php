@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
             ->getDoctrineSchemaManager()
             ->listTableNames();
         foreach ($tableNames as $name) {
-            DB::table($name)->truncate();
+            if(!str_contains($name,'oauth')) DB::table($name)->truncate();
         }
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
         $this->call(PermissionRoleSeeder::class);

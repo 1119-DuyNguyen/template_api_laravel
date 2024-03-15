@@ -29,10 +29,11 @@ class AuthenticationApiController extends ApiController
      */
     public function register(RegisterUserRequest $request)
     {
-
-        $user=User::create($request->all())->sendEmailVerificationNotification();
+        $user=User::create($request->all());
+        $user->sendEmailVerificationNotification();
+        $accessToken = $user->createToken('authToken')->accessToken;
 //        event(new Registered($user));
-
+        return $this->successResponse(['message'=> "email xác thực đã được gửi", 'user' => $user, 'access_token' => $accessToken],200);
     }
 
     /**
