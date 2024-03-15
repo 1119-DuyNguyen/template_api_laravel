@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\Api\AuthenticationApiController;
 use App\Http\Controllers\Auth\Api\VerifyEmailController;
 use App\Http\Controllers\Backend\User\RoleController;
 use App\Http\Controllers\Backend\User\UserController;
+use App\Http\Controllers\ResetPasswordController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -48,6 +49,8 @@ Route::post('/email/verify/resend', function (Request $request) {
     return response()->json(["message" => "Email verification link sent on your email id"]);
 
 })->middleware(['auth:api', 'throttle:6,1'])->name('verification.send');
+Route::post('reset-password', [ResetPasswordController::class,'sendMail']);
+Route::put('reset-password/{token}', [ResetPasswordController::class,'reset'])->name('reset-password.token');
 
 /** Admin Routes */
 //Route::middleware('hasPermission')->group(function () {

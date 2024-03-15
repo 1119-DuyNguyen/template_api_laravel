@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use DB;
@@ -39,7 +40,9 @@ class UserSeeder extends Seeder
             ]
         ];
         foreach ($seedData as $data) {
-            User::create($data);
+            $user=  User::create($data);
+            $user->email_verified_at= Carbon::now();
+            $user->save();
         }
     }
 }
