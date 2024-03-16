@@ -17,7 +17,7 @@
 
                         </div>
                         <div class="card-body">
-                            <form action="{{route('admin.users.update',$user->id)}}" method="POST">
+                            <form action="{{route('web.users.update',$user->id)}}" method="POST">
                                 @csrf
                                 @method('PUT')
 
@@ -31,10 +31,6 @@
                                     <input type="text" class="form-control" name="email" value="{{$user->email}}">
                                 </div>
 
-                                <div class="form-group">
-                                    <label>Di động</label>
-                                    <input type="text" class="form-control" name="phone" value="{{$user->phone}}">
-                                </div>
 
                                 <div class="form-group">
                                     <label>Địa chỉ</label>

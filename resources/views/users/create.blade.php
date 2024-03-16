@@ -29,10 +29,6 @@
                                     <input type="text" class="form-control" name="email" value="">
                                 </div>
 
-                                <div class="form-group">
-                                    <label>Di động</label>
-                                    <input type="text" class="form-control" name="phone" value="">
-                                </div>
 
                                 {{-- <div class="form-group">--}}
                                 {{-- <label>Địa chỉ</label>--}}
