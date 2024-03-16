@@ -58,5 +58,8 @@ Route::put('reset-password/{token}', [ResetPasswordController::class,'reset'])->
 Route::apiResource('users', UserController::class);
 //manage role
 Route::apiResource('roles', RoleController::class);
+Route::post('waste-dictionaries/identify', [\App\Http\Controllers\WasteDictionaryController::class,'identifyRecycleTrash']);
+Route::apiResource('waste-dictionaries', \App\Http\Controllers\WasteDictionaryController::class);
+
 //});
 

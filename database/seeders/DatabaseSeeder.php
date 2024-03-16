@@ -32,20 +32,21 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
 
 
-        $this->call(CategoriesSeeder::class);
+//        $this->call(CategoriesSeeder::class);
 
-        $this->call(ProductSeeder::class);
+//        $this->call(ProductSeeder::class);
 
-        for ($i = 0; $i < 30; ++$i) {
-            // cà phê đóng gói
-            DB::insert(
-                "
-            INSERT INTO `products` (`id`, `name`, `thumb_image`, `category_id`, `description`, `content`, `price`, `created_at`, `updated_at`) VALUES
-            (" . $i + 61 . ", 'Tri Ân Thầy Cô {$i}', 'uploads/products/tri-an-thay-co.jpg', 1, 'Món quà ý nghĩa ngày nhà giáo', '<p>Khi mua trọn bộ &nbsp;<strong>Tri ân Thầy Cô</strong> Quý khách sẽ được<strong>&nbsp;Tặng kèm 1 phin nhôm nâu và 1 túi giấy đen</strong><br>
-            Thời gian khuyến mãi: từ hôm nay đến 30/11/2023 ( hoặc đến khi hết quà tặng).<br>
-            </p>
-              ', 337000, '2023-09-23 17:52:28', '2023-09-23 17:52:28')"
-            );
-        }
+//        for ($i = 0; $i < 30; ++$i) {
+//            // cà phê đóng gói
+//            DB::insert(
+//                "
+//            INSERT INTO `products` (`id`, `name`, `thumb_image`, `category_id`, `description`, `content`, `price`, `created_at`, `updated_at`) VALUES
+//            (" . $i + 61 . ", 'Tri Ân Thầy Cô {$i}', 'uploads/products/tri-an-thay-co.jpg', 1, 'Món quà ý nghĩa ngày nhà giáo', '<p>Khi mua trọn bộ &nbsp;<strong>Tri ân Thầy Cô</strong> Quý khách sẽ được<strong>&nbsp;Tặng kèm 1 phin nhôm nâu và 1 túi giấy đen</strong><br>
+//            Thời gian khuyến mãi: từ hôm nay đến 30/11/2023 ( hoặc đến khi hết quà tặng).<br>
+//            </p>
+//              ', 337000, '2023-09-23 17:52:28', '2023-09-23 17:52:28')"
+//            );
+//        }
+        $this->call(WasteDictionarySeeder::class);
     }
 }
