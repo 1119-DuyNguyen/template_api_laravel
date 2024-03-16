@@ -31,11 +31,23 @@ class WasteDictionarySeeder extends Seeder
                 'description'=> "Plastic bottle là một loại đồ đựng phổ biến được sản xuất từ nhựa polyethylene terephthalate (PET) hoặc polyethylene (PE). Chúng được sử dụng rộng rãi trong đời sống hàng ngày để đựng nước uống, nước ngọt, nước đóng chai, dầu, sữa, và nhiều sản phẩm khác.",
                 'img_url'=> "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ69TL32isSyDFRGDMS74wZLOmIBd7pazqL-Q&usqp=CAU",
                 'is_recycle'=>true,
-                'how_to_recycle'=> "Rửa sạch: Trước khi tái chế, hãy rửa sạch chai để loại bỏ bất kỳ chất còn lại bên trong và tránh ô nhiễm cho quá trình tái chế.
-                Làm phẳng: Sau khi rửa sạch, bạn có thể làm phẳng chai bằng cách nén nó hoặc dùng các công cụ phẳng hỗ trợ. Điều này giúp tiết kiệm không gian trong thùng tái chế và vận chuyển.
-                Tách phần nhựa (nếu có): Nếu chai có nắp hoặc phần nhựa khác, hãy tách chúng ra khỏi phần chai chính. Những phần nhựa này có thể được tái chế riêng biệt hoặc loại bỏ đúng cách.
-                Đưa vào thùng tái chế: Sau khi đã rửa sạch và làm phẳng chai, đặt chúng vào thùng tái chế phù hợp. Các cơ sở tái chế thường sẽ chấp nhận chai để tái chế hoặc tái sử dụng chúng.
-                ",
+                'how_to_recycle'=> "Chai Nhựa:
+                Trồng Cây Nội Thất: Sử dụng chai nhựa nhỏ để trồng cây nội thất nhỏ, như cây xanh mini, làm điểm nhấn xanh trong nhà.
+                Bình Nước Di Động: Cắt đáy của chai nhựa và sử dụng phần trên làm bình nước di động khi đi dã ngoại hoặc tập thể dục.
+                Bộ Sưu Tập Đồ Chơi: Tái sử dụng các chai nhựa để làm bộ sưu tập đồ chơi cho trẻ em, chẳng hạn như đựng viên bi, mảnh ghép hoặc các vật dụng sáng tạo khác.
+                Đèn Trang Trí DIY: Cắt các chai nhựa thành các hình dạng khác nhau và thêm đèn LED vào bên trong để tạo ra đèn trang trí độc đáo.
+                Tạo Nút Môi Cho Dây Giày: Cắt phần đỉnh của chai nhựa thành các miếng nhỏ và sơn chúng theo màu sắc khác nhau để tạo ra các nút môi cho dây giày.
+                Đựng Dây Điện: Sử dụng các chai nhựa để đựng dây điện, dây sạc hoặc dây cáp để giữ chúng gọn gàng và tránh rối khi không sử dụng.
+                Chai Thuỷ Tinh:
+                Hũ Đựng Thực Phẩm: Rửa sạch chai thuỷ tinh và tái sử dụng chúng để đựng thực phẩm khô như gạo, hạt, hoặc gia vị.
+                Đèn Hồng Ngoại DIY: Làm đèn hồng ngoại bằng cách đặt nến hoặc đèn LED vào chai thuỷ tinh và sử dụng nó để tạo ra ánh sáng mềm và ấm áp.
+                Nến Chai: Đổ sáp nến vào chai thuỷ tinh và thêm ngọn lửa, tạo ra nến chai thú vị và thơm phức.
+                Làm Chậu Trồng Cây: Sử dụng chai thuỷ tinh lớn để trồng cây hoặc làm vật trang trí cho sân vườn hoặc ban công.
+                Chai Kim Loại:
+                Bình Đựng Nước: Tái sử dụng chai kim loại để đựng nước hoặc đồ uống khi đi ra ngoài hoặc tập thể dục.
+                Đựng Bút Viết: Sơn hoặc trang trí chai kim loại và sử dụng chúng để đựng bút viết hoặc cây viết.
+                Tạo Đồ Trang Trí: Sử dụng chai kim loại để tạo ra các vật trang trí như đèn treo, móc treo quần áo, hoặc vật trang trí tường.
+                Làm Chân Đế cho Đèn Bàn: Sử dụng chai kim loại lớn và cứng để làm chân đế cho đèn bàn, tạo điểm nhấn thú vị cho nội thất.",
             ],
             [
                 'name'=> "Nắp Chai (Bottle Cap)",
@@ -177,12 +189,22 @@ class WasteDictionarySeeder extends Seeder
                 'description'=> "Ống Hút là vật dụng nhỏ, thường làm từ nhựa hoặc giấy, được sử dụng để hút chất lỏng từ các đồ uống.",
                 'img_url'=> "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMdIGtwjfvL2dzrAx1v8Xn4JjNPTKkzfZpuA&usqp=CAU",
                 'is_recycle'=>true,
-                'how_to_recycle'=> "Rửa sạch: Trước khi tái chế, hãy rửa sạch ống hút để loại bỏ bất kỳ dầu mỡ hoặc chất cặn còn lại.
-                Tái chế thành vật dụng mới: Bạn có thể tái chế ống hút để tạo ra các vật dụng mới như trang sức, móc chìa khóa, hoặc đồ trang trí.
-                Sử dụng làm vật liệu cho nghệ thuật: Sử dụng ống hút làm vật liệu cho các dự án nghệ thuật như làm lụa hoặc lá nhựa để tạo ra các tác phẩm nghệ thuật sáng tạo.
-                Tái chế thành phụ kiện hoặc trang trí: Tái chế ống hút để tạo ra các phụ kiện hoặc trang trí như móc chìa khóa, màn chắn ánh sáng, hoặc các loại đồ trang trí khác.
-                Sử dụng làm vật liệu xây dựng: Ống hút có thể được sử dụng như vật liệu xây dựng cho các dự án nhỏ như làm móng nhà mô hình hoặc làm bảo vệ cho cây trồng nhỏ.
-                ",
+                'how_to_recycle'=> "Ống Hút Kim Loại:
+                Tạo Đồ Trang Trí: Sơn hoặc trang trí các ống hút kim loại để tạo ra các vật trang trí như móc treo quần áo, móc chìa khóa hoặc trang trí tường.
+                Đóng Gói Quà: Sử dụng ống hút kim loại làm phần trang trí cho gói quà, tạo ra một bước đột phá và sáng tạo.
+                Tạo Đồ Chơi DIY: Tái sử dụng các ống hút kim loại để tạo ra các đồ chơi DIY như xe đua nhỏ hoặc cây sáo.
+                Đồ Trang Trí Thời Trang: Sử dụng ống hút kim loại làm phụ kiện trang trí cho trang phục, chẳng hạn như làm dây đeo cho kính hoặc làm vòng cổ.
+                Dụng Cụ Nghệ Thuật: Sử dụng ống hút kim loại như là dụng cụ vẽ để tạo ra các nét vẽ độc đáo và sáng tạo trên giấy hoặc vật liệu khác.
+                Ống Hút Nhựa:
+                Tạo Đồ Chơi cho Trẻ Em: Sử dụng ống hút nhựa để tạo ra các đồ chơi cho trẻ em như sáo nhỏ, các đồ chơi xếp hình hoặc đồ chơi thủ công DIY.
+                Đóng Gói Đồ Bảo Quản: Sử dụng các ống hút nhựa làm phần trang trí cho gói đồ bảo quản, giúp làm cho gói đồ trở nên độc đáo và hấp dẫn.
+                Đồ Trang Trí Nội Thất: Sử dụng ống hút nhựa làm vật liệu trang trí cho nội thất, chẳng hạn như làm móc treo để treo đèn, chân đế cho đồ trang trí hoặc vật liệu làm tranh 3D.
+                Dụng Cụ Làm Mô Hình: Sử dụng ống hút nhựa làm dụng cụ làm mô hình để tạo ra các mô hình nhỏ hoặc các tác phẩm nghệ thuật sáng tạo.
+                Ống Hút Tre:
+                Làm Đồ Chơi Cho Thú Cưng: Sử dụng các ống hút tre để tạo ra các đồ chơi cho thú cưng như những chiếc túi chứa thức ăn hoặc đồ chơi cắn.
+                Tạo Đồ Trang Trí Ngoại Thất: Sử dụng ống hút tre làm phần trang trí cho vườn hoặc sân vườn, chẳng hạn như làm giàn treo đồ trang trí hoặc làm vật liệu trang trí cho hòn non bộ.
+                Đồ Trang Trí Nội Thất: Sử dụng ống hút tre làm vật liệu trang trí cho nội thất, chẳng hạn như làm màn treo cửa, đèn trang trí hoặc đồ trang trí tường.
+                Dụng Cụ Trang Trí Bánh: Sử dụng các ống hút tre như dụng cụ để trang trí bánh, tạo ra các hình dáng và hoa văn độc đáo trên bề mặt bánh.",
             ],
             [
                 'name'=> "Miếng Xốp (Styrofoam piece)",
