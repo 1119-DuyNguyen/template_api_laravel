@@ -37,23 +37,17 @@ abstract class ApiController extends Controller
         );
     }
 
-    protected function getExternalApi($url, $nameCache, $parameter = []): \Illuminate\Http\JsonResponse
+    protected function getExternalApi($url, $parameter = []): \Illuminate\Http\JsonResponse
     {
-        if (!Cache::has($nameCache)) {
             $response = Http::withHeader(
                 'token',
                 "",
             )->acceptJson()->get($url, $parameter);
             if ($response->ok()) {
-                $data = $response->json();
-                Cache::forever($nameCache, $data);
-                return $this->successResponse(['data' => $data]);
+                return $response->json();
             } else {
-                return $this->errorResponse(['message' => "Lấy dữ liệu bị lỗi, hãy bấm F5"], 500);
+                return [];
             }
-        } else {
-            $data = Cache::get($nameCache);
-            return $this->successResponse(['data' => $data]);
-        }
+
     }
 }
