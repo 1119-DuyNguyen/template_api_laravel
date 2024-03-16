@@ -7,6 +7,7 @@ use App\Http\Requests\WasteDictionaryRequest;
 use App\Http\Requests\UpdateWasteDictionaryRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+
 class WasteDictionaryController extends CRUDApiController
 {
     public function index()
@@ -22,28 +23,28 @@ class WasteDictionaryController extends CRUDApiController
 
     public function identifyRecycleTrash(Request $request)
     {
-
-        $response = Http::get("awfully-happy-lizard.ngrok-free.app/analyze",  [
-            'image'=> $request->input('image')
+        $response = Http::get("awfully-happy-lizard.ngrok-free.app/analyze", [
+            'image' => $request->input('image')
 //            'image'=> "https://res.cloudinary.com/dizoqp8hc/image/upload/v1710578263/mdynfbrid1wyhrqqbuy2.jpg"
 
         ]);
         $dataJson = json_decode($response, true);
-        if(empty($dataJson))
-        {
-            return $this->errorResponse(['message'=> 'Nhận dữ liệu thất bại'], 500);
+        if (empty($dataJson)) {
+            return $this->errorResponse(['message' => 'Nhận dữ liệu thất bại'], 500);
         }
-        $dataDictionary=$dataJson['json_data'];
+        $dataDictionary = $dataJson['json_data'];
         $wasteDictionary = WasteDictionary::all();
+        $uniqueDictionary = [];
         foreach ($dataDictionary as $key => $data) {
             $dataWaste = $wasteDictionary->filter(function ($value, $key) use ($data) {
                 return str_contains($value['name'], $data['name']);
             })->first();
             if (!empty($dataWaste)) {
-                $dataDictionary[$key]['dictionary'] = $dataWaste;
+                $data['dictionary'] = $dataWaste;
+                $uniqueDictionary[$data['name']] = $data;
             }
         }
-        $dataJson['json_data']=$dataDictionary;
+        $dataJson['json_data'] = array_values($uniqueDictionary);
         return $this->successResponse([$dataJson]);
     }
 
