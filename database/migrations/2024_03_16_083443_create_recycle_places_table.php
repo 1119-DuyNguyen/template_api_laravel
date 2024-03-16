@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('recycle_places', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
+            $table->string('address');
+            $table->string('schedule');
+            $table->string('contact');
+            $table->string('add_point');
         });
     }
 
