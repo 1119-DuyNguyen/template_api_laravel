@@ -4,6 +4,7 @@ namespace App\Http\Controllers\BackendWeb;
 
 use App\Http\Controllers\CRUDApiController;
 use App\Http\Controllers\CRUDController;
+use App\Http\Requests\RecycleCRUDPlaceRequest;
 use App\Models\RecyclePlace;
 use App\Http\Requests\RecyclePlaceRequest;
 use App\Http\Requests\UpdateRecyclePlaceRequest;
@@ -21,7 +22,7 @@ class RecyclePlaceCRUDController extends CRUDController
 
     protected function getFormRequest(): string
     {
-        return RecyclePlaceRequest::class;
+        return RecycleCRUDPlaceRequest::class;
     }
 
 
@@ -51,11 +52,12 @@ class RecyclePlaceCRUDController extends CRUDController
                 'label' => "Địa chỉ",
             ],
             [
-                'type' => 'tel',
-                'name' => "phone",
-                'class' => "contact",
+                'type' => 'phone',
+                'name' => "contact",
+                'class' => "",
                 'label' => "Số điện thoại liên hệ",
             ],
+
             [
                 'type' => 'text',
                 'name' => "add_point",

@@ -47,6 +47,13 @@
                           class="form-control {{$formElement['class'] ?? ""}}">{!! $formElement['value'] !!}</textarea>
                 @break
 
+            @case('phone')
+                <input type="tel" class="form-control {{$formElement['class'] ?? ""}}"
+                       placeholder="0383202794" pattern="0[0-9]{9}" required
+                       name="{{$formElement['name']}}"
+                       value="{{$formElement['value']}}">
+                @break
+
             @default
                 <input type="{{$formElement['type']}}" class="form-control {{$formElement['class'] ?? ""}}"
                        name="{{$formElement['name']}}"

@@ -14,6 +14,17 @@
     </div>
     <ul class="sidebar-menu">
         {{-- [ name=>str, title=>str,child=>[]]--}}
+        <form action="{{route('web.logout')}}" method="POST">
+            @csrf
+            <li><a class="nav-link " href="{{route('web.logout')}}"
+                   onclick="this.closest('form').submit();return false;">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Đăng xuất</span></a>
+            </li>
+
+        </form>
+
+
         @php
             $listLanguage="Danh sách";
 
@@ -35,7 +46,9 @@
         [
         ['name'=>$listLanguage,'icon'=>'<i class="fas fa-table"></i>','routeName'=>'web.recycle-places.index'],
         ['name'=>$addLanguage,'icon'=>'<i class="fas fa-plus"></i>','routeName'=>'web.recycle-places.create' ],
-        ]],
+        ]]
+
+        ,
         ] as $nav
         )
 
@@ -91,9 +104,7 @@
                 @endif
             @endif
         @endforeach
-        {{--        <li><a class="nav-link " href="{{route('home')}}">--}}
-        {{--                <i class="fas fa-arrow-left"></i>--}}
-        {{--                <span>Quay lại</span></a></li>--}}
+
 
     </ul>
 

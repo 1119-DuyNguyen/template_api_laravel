@@ -23,10 +23,20 @@ Route::get('/', function () {
 Route::get('/send-welcome-email', [EmailController::class, 'sendWelcomeEmail']);
 
 Route::as('web.')->group(function () {
-    Route::get('login', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'login'])->name('login');
+    Route::middleware('guest')->group(function () {
+        Route::get('login', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'login'])->name('login');
 
-    Route::post('login', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'store']);
-    Route::middleware(['auth', 'hasPermission'])->group(
+        Route::post('login', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'store']);
+    });
+
+    Route::middleware('auth:web')->post(
+        'logout',
+        [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'destroy']
+    )->name(
+        'logout'
+    );
+
+    Route::middleware(['auth:web', 'hasPermission'])->group(
         function () {
             Route::put(
                 'users/change-status',

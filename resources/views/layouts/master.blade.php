@@ -16,8 +16,8 @@
             <link rel="stylesheet" href="{{asset("backend/assets/modules/bootstrap/css/bootstrap.min.css")}}">
             {{--    <link rel="stylesheet" href="{{asset("backend/assets/modules/fontawesome/css/all.min.css")}}">--}}
             <link rel="stylesheet" href="{{asset('lib/fontawesome/css/all.min.css')}}">
-            <title>{{ $setting->name ?? "Drinks Order"}}</title>
-            <link rel="icon" href="{{ asset('img/logo.png')}}" type="image/gif" sizes="16x16">
+            <title>{{ "LogiCode"}}</title>
+            <link rel="icon" href="{{ asset('img/no-img.png')}}" type="image/gif" sizes="16x16">
 
             <!-- CSS Libraries -->
             {{--    <link rel="stylesheet" href="{{asset("backend/assets/modules/jqvmap/dist/jqvmap.min.css")}}">--}}

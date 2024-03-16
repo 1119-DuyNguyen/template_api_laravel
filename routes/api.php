@@ -32,7 +32,7 @@ Route::post('/login', [AuthenticationApiController::class, 'store'])->name('logi
 
 Route::post('/refresh', [AuthenticationApiController::class, 'update'])->name('refresh');
 
-Route::post('/logout', [AuthenticationApiController::class, 'update'])->name('logout');
+//Route::post('/logout', [AuthenticationApiController::class, 'update'])->name('logout');
 Route::post('/register', [AuthenticationApiController::class, 'register'])->name('register');
 
 

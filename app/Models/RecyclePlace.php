@@ -9,13 +9,14 @@ use Illuminate\Database\Eloquent\Model;
 class RecyclePlace extends Model
 {
     use HasFactory;
+
     protected $fillable = [
-        'name' ,
-        'address' ,
-        'schedule' ,
-        'contact' ,
-        'add_point' ,
+        'name',
+        'address',
+        'contact',
+        'add_point',
     ];
+
     protected static function boot()
     {
         // you MUST call the parent boot method
