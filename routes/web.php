@@ -26,7 +26,7 @@ Route::as('web.')->group(function () {
     Route::get('login', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'login'])->name('login');
 
     Route::post('login', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'store']);
-    Route::middleware('auth')->group(
+    Route::middleware(['auth', 'hasPermission'])->group(
         function () {
             Route::put(
                 'users/change-status',
