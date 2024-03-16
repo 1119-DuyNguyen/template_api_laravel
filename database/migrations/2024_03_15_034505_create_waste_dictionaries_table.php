@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->text('description');
             $table->text('img_url');
             $table->boolean('is_recycle');
+            $table->boolean('is_organic')->default(false);
             $table->text('how_to_recycle');
             $table->timestamps();
         });

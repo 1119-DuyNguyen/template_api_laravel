@@ -40,7 +40,7 @@ class WasteDictionarySeeder extends Seeder
             [
                 'name'=> "Nắp Chai (Bottle Cap)",
                 'description'=> "Nắp Chai là phần đậy của chai, thường được làm từ nhựa, kim loại hoặc cao su.",
-                'img_url'=> "",
+                'img_url'=> "https://abvbeershop.com/wp-content/uploads/2022/03/1.06.jpg",
                 'is_recycle'=>true,
                 'how_to_recycle'=> "Tách phần nhựa và kim loại: Nếu nắp chai có cấu trúc phức tạp gồm cả phần nhựa và kim loại, hãy tách chúng ra khỏi nhau. Nhưng đừng lo lắng, có một số how_to_recycle sáng tạo cho cả hai loại này.
                 Tái chế thành hạt nhựa: Nắp chai nhựa có thể được chuyển đổi thành hạt nhựa tái chế, được sử dụng cho nhiều mục đích khác nhau như sản xuất đồ chơi, băng keo hoặc sản phẩm nhựa khác.
@@ -115,7 +115,7 @@ class WasteDictionarySeeder extends Seeder
             [
                 'name'=> "Rác Khác (Other litter):",
                 'description'=> "Rác Khác là các vật liệu không thuộc vào các loại rác cụ thể như nhựa, thủy tinh, hay kim loại.",
-                'img_url'=> "",
+                'img_url'=> "https://e7.pngegg.com/pngimages/459/226/png-clipart-brown-cardboard-boxes-with-black-trash-bags-and-garbage-waste-collection-household-hazardous-waste-house-clearance-waste-management-others-miscellaneous-recycling.png",
                 'is_recycle'=>true,
                 'how_to_recycle'=> "Phân loại và xác định vật liệu: Đầu tiên, phải phân loại và xác định loại vật liệu của rác khác. Điều này có thể bao gồm các vật liệu như vải, cao su, gỗ, và nhiều loại vật liệu khác.
                 Tái chế thành sản phẩm mới: Dựa trên loại vật liệu, bạn có thể tái chế rác khác thành các sản phẩm mới. Ví dụ, vải có thể được tái chế thành túi mua sắm hoặc đồ trang trí, còn gỗ có thể được tái chế thành đồ nội thất hoặc nghệ thuật.
@@ -126,7 +126,7 @@ class WasteDictionarySeeder extends Seeder
             [
                 'name'=> "Nhựa Khác (Other plastic)",
                 'description'=> "Nhựa Khác là các vật liệu nhựa không thuộc vào các loại nhựa cụ thể như PET, HDPE, PVC, hay PP.",
-                'img_url'=> "",
+                'img_url'=> "https://hq2.recyclist.co/wp-content/uploads/sites/2/2015/02/no7plastic1-300x300.jpg",
                 'is_recycle'=>true,
                 'how_to_recycle'=> "Phân loại và xác định loại nhựa: Trước tiên, phải phân loại và xác định loại nhựa của vật liệu Nhựa Khác. Điều này giúp xác định phương pháp tái chế phù hợp.
                 Tái chế thành sản phẩm mới: Dựa trên loại nhựa, bạn có thể tái chế Nhựa Khác thành các sản phẩm mới như đồ chơi, đồ nội thất, hoặc vật dụng gia đình.
@@ -199,7 +199,7 @@ class WasteDictionarySeeder extends Seeder
             [
                 'name'=> "Rác không được ghi nhãn (Unlabeled litter)",
                 'description'=> "Rác không được ghi nhãn là các vật liệu rác không có nhãn hiệu hoặc không thuộc vào các loại rác cụ thể được phân loại.",
-                'img_url'=> "",
+                'img_url'=> "https://thumbs.dreamstime.com/b/smiling-green-recycle-bin-cartoon-mascot-character-holding-blank-sign-illustration-isolated-white-background-smiling-green-120320519.jpg",
                 'is_recycle'=>true,
                 'how_to_recycle'=> "Phân loại và xác định vật liệu: Đầu tiên, phải phân loại và xác định loại vật liệu của Rác không được ghi nhãn. Điều này giúp xác định phương pháp tái chế phù hợp.
                 Tái chế thành sản phẩm mới: Dựa trên loại vật liệu, bạn có thể tái chế Rác không được ghi nhãn thành các sản phẩm mới như đồ chơi, đồ nội thất, hoặc vật dụng gia đình.

@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\Models\WasteDictionary;
+use Illuminate\Support\Str;
 
 class WasteDictionaryObserver
 {
@@ -10,7 +11,8 @@ class WasteDictionaryObserver
     {
         if(isset($wasteDictionary->name)) {
             $wasteDictionary->name_vietsub = __($wasteDictionary->name);
-//            $wasteDictionary->name_vietsub = "hi";
+            $wasteDictionary->slug = Str::slug($wasteDictionary->name);
+            //            $wasteDictionary->name_vietsub = "hi";
 
         }
 
