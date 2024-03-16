@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
@@ -25,7 +26,9 @@ class DatabaseSeeder extends Seeder
             ->getDoctrineSchemaManager()
             ->listTableNames();
         foreach ($tableNames as $name) {
-            if(!str_contains($name,'oauth')) DB::table($name)->truncate();
+            if (!str_contains($name, 'oauth')) {
+                DB::table($name)->truncate();
+            }
         }
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
         $this->call(PermissionRoleSeeder::class);
@@ -48,5 +51,6 @@ class DatabaseSeeder extends Seeder
 //            );
 //        }
         $this->call(WasteDictionarySeeder::class);
+        $this->call(RecyclePlaceSeeder::class);
     }
 }

@@ -24,7 +24,7 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         Session::put('success', 'Đăng nhập thành công');
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended('');
     }
 
     /**
@@ -40,6 +40,11 @@ class AuthenticatedSessionController extends Controller
         Session::flash('success', 'Đăng xuất thành công');
 
 
-        return redirect('/');
+        return redirect('/users');
+    }
+
+    public function login()
+    {
+        return view('auth.login');
     }
 }

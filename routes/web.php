@@ -4,6 +4,7 @@ use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +21,22 @@ Route::get('/', function () {
 });
 
 Route::get('/send-welcome-email', [EmailController::class, 'sendWelcomeEmail']);
+
+Route::as('web.')->group(function () {
+    Route::get('login', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'login'])->name('login');
+
+    Route::post('login', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'store']);
+    Route::middleware('auth')->group(
+        function () {
+            Route::put(
+                'users/change-status',
+                [\App\Http\Controllers\BackendWeb\User\UserController::class, 'changeStatus']
+            )->name('users.change-status');
+            Route::resource('users', \App\Http\Controllers\BackendWeb\User\UserController::class);
+            //manage role
+            Route::resource('roles', \App\Http\Controllers\BackendWeb\User\RoleController::class);
+            Route::resource('recycle-places', \App\Http\Controllers\BackendWeb\RecyclePlaceCRUDController::class);
+        }
+    );
+}
+);

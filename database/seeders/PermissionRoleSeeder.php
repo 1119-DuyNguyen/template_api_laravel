@@ -26,12 +26,9 @@ class PermissionRoleSeeder extends Seeder
         $userRole = Role::create(['name' => 'Người dùng']);
 
         $arrayPermission = [
-            'admin.users' => 'Quản lý người dùng',
-            'admin.categories' => 'Quản lý danh mục',
-            'admin.products' => 'Quản lý sản phẩm',
-            'admin.orders' => 'Xử lý đơn hàng',
-            'admin.roles' => 'Quản lý vai trò',
-            'admin.dashboard' => 'Xem thống kê',
+            'web.users' => 'Quản lý người dùng',
+            'web.roles' => 'Quản lý vai trò',
+            'web.recycle-places' => 'Quản lý nơi tái chế',
 
         ];
         foreach ($arrayPermission as $per => $description) {

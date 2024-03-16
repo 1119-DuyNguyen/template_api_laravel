@@ -12,6 +12,7 @@ use Laravel\Passport\HasApiTokens;
 class User extends Authenticatable implements MustVerifyEmail
 {
     use  HasFactory, Notifiable, hasApiTokens;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -46,16 +47,16 @@ class User extends Authenticatable implements MustVerifyEmail
         'password' => 'hashed',
     ];
 
-    public function role(): BelongsTo
+    public function role(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Role::class);
     }
+
     protected static function boot()
     {
-
         parent::boot();
 
-       static::observe(UserObserver::class);
+        static::observe(UserObserver::class);
     }
 
 
