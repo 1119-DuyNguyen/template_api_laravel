@@ -5,12 +5,24 @@ namespace App\Http\Controllers;
 use App\Models\WasteDictionary;
 use App\Http\Requests\WasteDictionaryRequest;
 use App\Http\Requests\UpdateWasteDictionaryRequest;
+use Illuminate\Http\Request;
 
 class WasteDictionaryController extends CRUDApiController
 {
+    public function index()
+    {
+        $request = request();
+        $search = $request->input('search');
+        return $this->successResponse(
+            $this->model()::when($search, function ($q) use ($search) {
+                return $q->where('name', 'like', '%' . $search . '%');
+            })->get()
+        );
+    }
+
     public function identifyRecycleTrash()
     {
-        $dataJson ='[
+        $dataJson = '[
   {
     "name":"Straw",
     "class":15,
@@ -45,12 +57,17 @@ class WasteDictionaryController extends CRUDApiController
     }
   }
 ]';
-        $dataJson=json_decode($dataJson,true);
+        $dataJson = json_decode($dataJson, true);
         //fix sau
         $wasteDictionary = WasteDictionary::all();
 //        $wasteDictionary=WasteDictionary::whereIn('name',$dataJson->pluck('name'))->get();
-        foreach ($dataJson as $key =>$data) {
-            $dataJson[$key]['dictionary'] = $wasteDictionary->random();
+        foreach ($dataJson as $key => $data) {
+            $dataWaste = $wasteDictionary->filter(function ($value, $key) use ($data) {
+                return str_contains($value['name'], $data['name']);
+            })->first();
+            if (!empty($dataWaste)) {
+                $dataJson[$key]['dictionary'] = $dataWaste;
+            }
         }
         return $this->successResponse($dataJson);
     }
